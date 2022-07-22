@@ -1,0 +1,296 @@
+/*
+COLOR PALETTE:
+
+Dark Liver Horses: #593D3B;
+Shadow: #8A7968;
+Umber: #6F5E53;
+Grullo: #AB947E;
+Khaki Web: #C3A995;
+
+/* GLOBALS */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Muli', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+p, h1{
+  pointer-events:none;
+}
+
+
+h2{
+  color: #F5F5F5;
+  font-weight: lighter;
+  
+}
+h3{
+  color: #F5F5F5;
+  font-weight: lighter;
+  padding:2%;
+  flex-wrap: wrap;
+  text-align: center;
+  
+}
+/* NAVIGATION */
+.wrapper{
+  background-color: #593D3B;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper div{
+  padding: 10px;
+  margin: 10px 0;
+}
+#menu a{
+  padding: 5px;
+  text-align: center;
+}
+#menu a:hover{
+  color:#F5F5F5;
+}
+#menu a, #header h1 a{
+  color: #F5B700;
+  width: 100%;
+}
+#header h1 a{
+  font-size: 40px;
+  font-weight: lighter;
+}
+#header{
+  display: flex;
+  flex-direction: column;
+}
+#menu{
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width:768px){
+  .wrapper{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .wrapper div{
+    padding: 20px;
+    margin: 50px 0;
+  }
+ 
+button {
+    flex-wrap: wrap;
+    color:#C3A995;
+    background-color:#593D3B;
+    border: 0px;
+    flex-direction: row; 
+    
+}
+button:hover {
+  flex-wrap: wrap;
+  text-align: center;
+  color: #fff;
+  background-color:#593D3B;
+  border: 0px;
+  flex-direction: row; 
+}
+#checkBtn2 {
+  flex-wrap: wrap;
+  text-align: center;
+  color:#C3A995;
+  background-color:#593D3B;
+  border: 0px;
+  flex-direction: row; 
+
+}
+
+  #menu{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+/* ABOUT */
+.about{
+  background-color: #F5F5F5;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about p, .about h1{
+  color: #59323B;
+}
+#aboutPar{
+  width: 50%;
+  margin-top: 20px;
+  text-align: justify;
+}
+#aboutImg{
+  margin-top: 20px;
+  text-align: center;
+}
+div.about h1{
+  text-shadow: 3px 3px 10px  #AB947E;
+  margin-top: 30px;
+}
+
+div.about p{
+  margin-bottom: 20px;
+}
+
+#LOCKED {
+  padding:5%;
+  height:15vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Lock */
+.firstdiv{
+  background-color: #AB947E;
+}
+.seconnddiv{
+    background-color: #AB947E;
+    width:100%;
+}
+#aboutlocked {
+  background-color: #AB947E;
+  width: 100%;
+}
+
+div.firstdiv>div h1{
+  color:#F5F5F5;
+  text-shadow: 3px 3px 10px  #C3A995;
+  text-align: center;
+  padding-top:30px;
+}
+
+.flex-container{
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.flex-container p, .flex-container h3{
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+@media (max-width:610px) {
+  .flex-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .one{
+    order: 2;
+  }
+  .two{
+    order: 1;
+    margin-bottom: 20px;
+  }
+}
+
+/* FOOTER */
+#contact div{
+  width: 70%;
+  margin: auto;
+  border: 2px solid #F5F5F5;
+  padding: 5px 5px 40px 5px;
+  color:#fff;
+}
+footer{
+  background-color: #593D3B;
+  padding-top: 20px;
+}
+
+footer p{
+  text-align: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  color: #F5F5F5;
+}
+footer h1{
+  color:#F5F5F5;
+  text-shadow: 3px 3px 10px  #000;
+  text-align: center;
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+textarea {
+    max-width: 100%;
+    display: block;
+}
+
+input{
+  max-width: 100%;
+  display: block;
+}
+
+input[type="button"]{
+  display: block;
+  float:right;
+  width: 60px;
+  margin-top: 5px;
+  padding: 5px;
+  border: none;
+  background-color: #F5F5F5;
+  color: #593D3B;
+}
+@media (min-width:768px) {
+  #contact div{
+    width: 20%;
+  }
+}
+@media (max-width:1195px) {
+  #contact div{
+    width: 30%;
+  }
+}
+@media (max-width:980px) {
+  #contact div{
+    width: 30%;
+  }
+}
+@media (max-width:775px) {
+  #contact div{
+    width: 50%;
+  }
+}
+@media (max-width:480px) {
+  #contact div{
+    width: 100%;
+  }
+}
+
+.howdoIunlockit {
+  border-color:#59323B;
+  width: 100%;
+}
+
+#textbox1 {
+  background-color: #000;
+}
+
+.kaede {
+  width: 70%;
+  margin: auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
