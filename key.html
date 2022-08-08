@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RealLife Security</title>
+  <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js" defer></script>
+  <script src="key.js" defer></script>
+  <script src="ai.js" defer></script>
+  <link
+  rel="stylesheet" href="maincode.css" 
+  />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="maincode.css" />
+</head>
+<body>
+<div id="UNLOCKED" style="display: block;">
+    <!-- LOGO -->
+  <nav class="wrapper">
+    <div id="header"><h1>
+      <a href="#">
+     <strong>
+      RealLife
+    </strong> Security
+    </h1>
+    <h2> 
+      <a id="Lockfunction:Unlocked"> 
+        Lock function: UNLOCKED
+      </a>
+      <a id="Lockfunction:Locked" style="display: none"> 
+        Lock function: LOCKED
+      </a>
+    </h2>
+  </div>
+    <!-- NAVIGATION -->
+    <div id="menu">
+      <a href="#home">
+        <button id="homeBtn">
+          <span class="material-symbols-outlined">
+             home 
+          </span>
+        </button>
+      <button id="keyBtn", onclick="document.location='key.html'">
+      <span class="material-symbols-outlined">
+          key 
+          </span>
+    </button>
+        <button id="questionmarkBtn", onclick="document.location='Help.html'">
+          <span class="material-symbols-outlined">
+              question_mark 
+              </span>
+        </button>
+      </a>
+    </div>
+  </nav>
+  
+  <!-- ABOUT -->
+  <div class="about" id="about">
+    <img src="lock-icon-11.png" id="kaede" style="display: none;">
+    <div id="ABOUTOURLOCKS">
+      <h1>ABOUT OUR LOCKS</h1>
+      </div>
+      <div id= "howdoI" style="display: none";>
+        <h1> HOW DO I UNLOCK THIS? </h1>
+      </div>
+    </div>
+    <div class="about">
+    <div id="aboutOur">
+      <p> The A.I. lock functions using facial recognisition software to personally recognise its owner and only its owner. With anti-lockpicking technology this lock will keep you and your valuables safe from any harm that may come. To engage the lock simply snap a photo of yourself for the software to input your details into its system. Once you wish to open the lock simply take another photo and the software to recogise you and release the lock funciton.</p>
+    </div>
+  <div id="HowdoIunlockthis" style="display: none;">
+    <p> You have locked this using facial ID software which means the lock will only disengage after recognising you. This is done by snapping a photo (just like you did previously) and then ticking the check mark (one tick) to upload your features, and then the unlock symbol to progress to the next page and unengage the lock features. If you are the same person as before the lock will recognise your features and disengage. If this does not happen please contact our team through the help features on the help page through the question mark icon (?) at the top, right corner of the page.</p>
+  </div>
+  <!-- middlesection (CALLED FIRSTDIV) -->
+  <div class="firstdiv" id="firstdiv">
+    <div>
+      <h3> Take a photo </h3>
+    <body onload="webcamStart()">
+
+    <video id="webcam"></video>
+      <canvas id="canvas" class="capturedImage"> </canvas>
+    <container> 
+      <h3> Take a photo to engage the lock.
+      <div class="buttons">
+          <button class="mainbtn" id="takePhoto">
+            <span class="material-symbols-outlined">
+              photo_camera
+              </span>
+          </button>
+          <button class="mainbtn" id="checkBtn1">
+            <span class="material-symbols-outlined">
+            done
+            </span> 
+          </button>
+            <button class="mainbtn" id="lockBtn">
+              <span class="material-symbols-outlined">
+                lock
+                </span>
+            </button>
+            <button class="mainbtn" id="unlockBtn" style="display:none">
+              <span class="material-symbols-outlined">
+                lock_open
+                </span>
+            </button>
+      </div>
+      </h3>
+    </container>
+
+  </body>
+</html>
+    </div>
+  </div>
+</div>
+  <!-- CONTACT & FOOTER -->
+  <footer id="contact">
+    
+<!-- Scripts -->
+
+<script>
+  document.getElementById('lockBtn').addEventListener('click', function () {
+    console.log ("lock locked")
+    document.getElementById('aboutOur').style.display="none";
+    document.getElementById('ABOUTOURLOCKS').style.display="none";
+    document.getElementById('lockBtn').style.display="none";
+    document.getElementById('HowdoIunlockthis').style.display="block"
+    document.getElementById('howdoI').style.display="block";
+    document.getElementById('unlockBtn').style.display="inline";
+    document.getElementById('kaede').style.display="block";
+    document.getElementById('Lockfunction:Unlocked').style.display="none";
+    document.getElementById('Lockfunction:Locked').style.display="block";
+    alert("Well done! You have engaged the lock! Now just repeat the exact same steps to unlock it!")
+  });
+</script>
